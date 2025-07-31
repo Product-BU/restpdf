@@ -21,6 +21,7 @@ import com.typesafe.scalalogging.LazyLogging
 import io.brainergy.pdf.verify.VerifyFacade
 import io.brainergy.util.BJson
 import javax.inject.{Inject, Singleton}
+import play.api.mvc.{Action, AnyContent}
 
 /**
  * @author Saroj C on Jul 31, 2025
@@ -31,7 +32,7 @@ class LicenseController @Inject()(facade: VerifyFacade)
     with LazyLogging
     with BJson {
 
-  def buildInfo: Action[AnyContent] = Action {
+  def extract: Action[AnyContent] = Action {
     Ok(s"""
     { 
       "projectName": "RestPDF",
