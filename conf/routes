@@ -22,3 +22,5 @@ POST           /pdf/verify/file     controllers.VerifyFileController.verifyFile
 POST           /cert/save           controllers.CertController.save
 POST           /cert/get            controllers.CertController.get
 POST           /cert/extract        controllers.CertController.extract
+
+GET           /license     controllers.LicenseController.extract
